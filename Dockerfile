@@ -8,6 +8,8 @@ COPY ./requirements.txt .
 # Install dependencies
 RUN pip3 install --no-cache-dir -q -r requirements.txt
 
+RUN apt-get install -y iputils-ping
+
 # Add our code
 COPY ./app /app
 WORKDIR /app
