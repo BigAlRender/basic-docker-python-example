@@ -1,8 +1,7 @@
 #Grab the latest alpine image
 FROM python:3-bullseye
 
-RUN apt-get update && apt-get install -y --no-install-recommends \ 
-    apt-get install -y iputils-ping
+RUN apt-get update && apt-get install -y --no-install-recommends iputils-ping
     
 # Install python and pip
 
