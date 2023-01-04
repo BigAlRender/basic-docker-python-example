@@ -1,14 +1,15 @@
 #Grab the latest alpine image
 FROM python:3-bullseye
 
+RUN apt-get update && apt-get install -y --no-install-recommends \ 
+    apt-get install -y iputils-ping
+    
 # Install python and pip
 
 COPY ./requirements.txt .
 
 # Install dependencies
 RUN pip3 install --no-cache-dir -q -r requirements.txt
-
-RUN apt-get install -y iputils-ping
 
 # Add our code
 COPY ./app /app
