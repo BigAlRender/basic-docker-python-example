@@ -1,5 +1,5 @@
 #Grab the latest alpine image
-FROM python:3.10.5-slim-bullseye
+FROM python:3-bullseye
 
 # Install python and pip
 
