@@ -1,0 +1,7 @@
+services:
+  # A Docker web service
+  - type: web
+    name: basic-docker-python-example
+    runtime: docker
+    plan: free
+    initialDeployHook: ./initialization.sh
